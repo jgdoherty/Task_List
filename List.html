@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+
+	
+</head>
+
+<body>
+
+	<div ng-controller = "ToDoController">
+		<ul><li ng-repeat="do in todo"> {{do.name}} ({{do.description}})</li></ul>
+
+		</br>
+
+		Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type = "text" data-ng-model= "item.name"/> {{item.name}}
+		</br>
+		Description: <input type = "text" data-ng-model= "item.description"/> {{item.description}}
+		</br>
+		</br>
+		<button data-ng-click="makeAnItem()">Add a new Item</button>
+		</br>
+		</br>
+		<button data-ng-click="removeItems($index)">Remove each Item</button>
+</div>
+<script src="angular.min.js"></script>
+<script type="text/javascript" src="Myfunction.js" ></script>
+
+</body>
+</html>
